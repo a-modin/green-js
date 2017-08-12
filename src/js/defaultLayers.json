@@ -1,0 +1,111 @@
+[
+  {
+    "name": "collisions",
+    "type": "tiles",
+    "active": true,
+    "visible": true,
+    "blackout": 0,
+    "zIndex": 10,
+    "parallax": 0,
+    "zType": null
+  },
+
+  {
+    "name": "front-elements-2",
+    "type": "elements",
+    "active": false,
+    "visible": true,
+    "blackout": 0.3,
+    "zIndex": 9,
+    "parallax": 0,
+    "zType": "front-2"
+  },
+
+  {
+    "name": "front-elements",
+    "type": "elements",
+    "active": false,
+    "visible": true,
+    "blackout": 0.3,
+    "zIndex": 8,
+    "parallax": 0,
+    "zType": "front"
+  },
+
+  {
+    "name": "characters",
+    "type": "characters",
+    "active": false,
+    "visible": true,
+    "blackout": 0,
+    "zIndex": 7,
+    "parallax": 0,
+    "zType": null
+  },
+
+  {
+    "name": "transport",
+    "type": "transport",
+    "active": false,
+    "visible": true,
+    "blackout": 0,
+    "zIndex": 6,
+    "parallax": 0,
+    "zType": null
+  },
+
+  {
+    "name": "middle-elements",
+    "type": "elements",
+    "active": false,
+    "visible": true,
+    "blackout": 0,
+    "zIndex": 5,
+    "parallax": 0,
+    "zType": "middle"
+  },
+
+  {
+    "name": "back-elements",
+    "type": "elements",
+    "active": false,
+    "visible": true,
+    "blackout": -0.3,
+    "zIndex": 4,
+    "parallax": 0.1,
+    "zType": "back"
+  },
+
+  {
+    "name": "back-elements-2",
+    "type": "elements",
+    "active": false,
+    "visible": true,
+    "blackout": -0.2,
+    "zIndex": 3,
+    "parallax": 0.2,
+    "zType": "back-2"
+  },
+
+  {
+    "name": "clouds",
+    "type": "elements",
+    "active": false,
+    "visible": true,
+    "blackout": 0,
+    "zIndex": 0,
+    "parallax": 0,
+    "zType": null
+  },
+
+  {
+    "name": "background",
+    "type": "elements",
+    "active": false,
+    "visible": true,
+    "blackout": -0.5,
+    "zIndex": 0,
+    "parallax": 0,
+    "zType": null
+  }
+]

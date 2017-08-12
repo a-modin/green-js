@@ -1,0 +1,134 @@
+[
+  {
+    "name": "platform_1",
+    "image": "images/tiles.png",
+    "width": 234,
+    "height": 73,
+    "coords": {
+      "x": 0,
+      "y": 0
+    } 
+  },
+
+  {
+    "name": "platform_2",
+    "image": "images/tiles.png",
+    "width": 128,
+    "height": 96,
+    "coords": {
+      "x": 128,
+      "y": 0
+    } 
+  },
+
+  {
+    "name": "platform_3",
+    "image": "images/tiles.png",
+    "width": 128,
+    "height": 96,
+    "coords": {
+      "x": 256,
+      "y": 0
+    } 
+  },
+
+  {
+    "name": "ground",
+    "image": "images/tiles.png",
+    "width": 128,
+    "height": 96,
+    "coords": {
+      "x": 384,
+      "y": 0
+    } 
+  },
+
+  {
+    "name": "platform_4",
+    "image": "images/tiles.png",
+    "width": 160,
+    "height": 144,
+    "coords": {
+      "x": 0,
+      "y": 112
+    } 
+  },
+
+  {
+    "name": "tree",
+    "image": "images/tiles.png",
+    "width": 255,
+    "height": 440,
+    "coords": {
+      "x": 165,
+      "y": 110
+    } 
+  },
+
+  {
+    "name": "wood-bridge-barrier-1",
+    "image": "images/tiles.png",
+    "width": 50,
+    "height": 66,
+    "coords": {
+      "x": 512,
+      "y": 0
+    } 
+  },
+
+  {
+    "name": "wood-bridge-barrier-2",
+    "image": "images/tiles.png",
+    "width": 80,
+    "height": 66,
+    "coords": {
+      "x": 560,
+      "y": 0
+    } 
+  },
+
+  {
+    "name": "wood-bridge-barrier-3",
+    "image": "images/tiles.png",
+    "width": 55,
+    "height": 66,
+    "coords": {
+      "x": 640,
+      "y": 0
+    } 
+  },
+
+  {
+    "name": "wood-bridge-1",
+    "image": "images/tiles.png",
+    "width": 200,
+    "height": 97,
+    "coords": {
+      "x": 512,
+      "y": 98
+    } 
+  },
+
+  {
+    "name": "wood-bridge-2",
+    "image": "images/tiles.png",
+    "width": 175,
+    "height": 97,
+    "coords": {
+      "x": 712,
+      "y": 98
+    } 
+  },
+
+  {
+    "name": "wood-bridge-3",
+    "image": "images/tiles.png",
+    "width": 200,
+    "height": 97,
+    "coords": {
+      "x": 886,
+      "y": 98
+    } 
+  }
+]
+

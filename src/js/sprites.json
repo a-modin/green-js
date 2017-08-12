@@ -1,0 +1,253 @@
+{
+  "player": {
+    "framesAmount": 13,
+    "frameWidth": 64,
+    "frameHeight": 64,
+    "image": "images/player2.png",
+    
+    "animations": {
+
+      "runRight": {
+        "framesAmount": 11,
+        "index": 0,
+        "speed": 16
+      },
+
+      "runLeft": {
+        "framesAmount": 11,
+        "index": 1,
+        "speed": 16
+      },
+
+      "rightAndBrake": {
+        "framesAmount": 11,
+        "index": 2,
+        "speed": 16
+      },
+
+      "leftAndBrake": {
+        "framesAmount": 11,
+        "index": 3,
+        "speed": 16
+      },
+
+      "standRight": {
+        "framesAmount": 11,
+        "index": 4,
+        "speed": 12
+      },
+
+      "standLeft": {
+        "framesAmount": 11,
+        "index": 5,
+        "speed": 12
+      },
+
+      "walkRight": {
+        "framesAmount": 13,
+        "index": 6,
+        "speed": 20
+      },
+
+      "walkLeft": {
+        "framesAmount": 13,
+        "index": 7,
+        "speed": 20
+      },
+
+      "jumpRight": {
+        "framesAmount": 6,
+        "index": 8,
+        "speed": 24
+      },
+
+      "jumpLeft": {
+        "framesAmount": 1,
+        "index": 9,
+        "speed": 24
+      },
+
+      "beforeJumpRight": {
+        "framesAmount": 11,
+        "index": 10,
+        "speed": 32
+      },
+
+      "beforeJumpRight_2": {
+        "framesAmount": 10,
+        "index": 11,
+        "speed": 24
+      },
+
+      "beforeJumpLeft": {
+        "framesAmount": 11,
+        "index": 12,
+        "speed": 32
+      },
+
+      "beforeJumpLeft_2": {
+        "framesAmount": 10,
+        "index": 13,
+        "speed": 24
+      },
+
+      "damageRight": {
+        "framesAmount": 6,
+        "index": 14,
+        "speed": 12
+      },
+
+      "damageRight_2": {
+        "framesAmount": 6,
+        "index": 15,
+        "speed": 16
+      },
+
+      "damageLeft": {
+        "framesAmount": 6,
+        "index": 16,
+        "speed": 12
+      },
+
+      "damageLeft_2": {
+        "framesAmount": 6,
+        "index": 17,
+        "speed": 16
+      }
+    }
+  },
+
+  "cactus": {
+    "framesAmount": 13,
+    "frameWidth": 45,
+    "frameHeight": 45,
+    "image": "images/cactus.png",
+    
+    "animations": {
+      "standLeft": {
+        "framesAmount": 11,
+        "index": 0,
+        "speed": 12
+      },
+
+      "standRight": {
+        "framesAmount": 11,
+        "index": 0,
+        "speed": 12
+      },
+
+      "damageLeft":{
+        "framesAmount": 5,
+        "index": 1,
+        "speed": 12
+      },
+
+      "damageRight":{
+        "framesAmount": 5,
+        "index": 1,
+        "speed": 12
+      },
+
+      "damageLeft_2":{
+        "framesAmount": 5,
+        "index": 3,
+        "speed": 12
+      },
+
+      "damageRight_2":{
+        "framesAmount": 5,
+        "index": 3,
+        "speed": 12
+      }
+    }
+  },
+
+  "oldWoman": {
+    "frameWidth": 48,
+    "frameHeight": 48,
+    "image": "images/old_woman.png",
+    
+    "animations": {
+      "walkRight": {
+        "framesAmount": 11,
+        "index": 0,
+        "speed": 12
+      },
+
+      "walkLeft": {
+        "framesAmount": 11,
+        "index": 1,
+        "speed": 12
+      },
+
+      "dieLeft": {
+        "framesAmount": 13,
+        "index": 4,
+        "speed": 24
+      },
+
+      "dieRight": {
+        "framesAmount": 13,
+        "index": 5,
+        "speed": 24
+      },
+
+      "lieLeft": {
+        "framesAmount": 1,
+        "index": 6,
+        "speed": 1
+      },
+
+      "lieRight": {
+        "framesAmount": 1,
+        "index": 7,
+        "speed": 1
+      },
+
+      "agressiveLeft": {
+        "framesAmount": 6,
+        "index": 8,
+        "speed": 12
+      },
+
+      "agressiveRight": {
+        "framesAmount": 6,
+        "index": 9,
+        "speed": 12
+      },
+
+      "shootLeft": {
+        "framesAmount": 11,
+        "index": 10,
+        "speed": 12
+      },
+
+      "shootRight": {
+        "framesAmount": 11,
+        "index": 11,
+        "speed": 12
+      }
+
+    }
+  },
+
+  "hedgehog": {
+    "frameWidth": 55,
+    "frameHeight": 35,
+    "image": "images/hedgehog.png",
+    
+    "animations": {
+      "walkLeft": {
+        "framesAmount": 11,
+        "index": 0,
+        "speed": 24
+      },
+
+      "walkRight": {
+        "framesAmount": 11,
+        "index": 1,
+        "speed": 24
+      }
+    }
+  }
+}
