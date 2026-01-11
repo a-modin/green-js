@@ -1,7 +1,7 @@
 import Character from '../character.js';
 import Vector from '../vector.js';
 import settings from '../settings.js';
-import Crutch from '../bullets/Crutch.js'
+import Crutch from '../bullets/crutch.js'
 
 class OldWoman extends Character {
 
