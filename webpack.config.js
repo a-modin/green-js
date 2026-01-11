@@ -2,6 +2,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 
 let webpack = require('webpack');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
+let CopyWebpackPlugin = require('copy-webpack-plugin');
 let path = require('path');
 let WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 
@@ -34,6 +35,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html'
     }),
+    new CopyWebpackPlugin([
+      { from: 'images', to: 'images' }
+    ]),
     new WebpackBuildNotifierPlugin({
       title: "Game",
       logo: path.resolve("./img/favicon.png"),

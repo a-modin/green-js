@@ -35,7 +35,7 @@ class Scene {
     this.bullets = [];
 
     this.image = new Image();
-    this.image.src = 'images/tile.png';
+    this.image.src = 'images/tiles.png';
 
     this.resize();
   };
