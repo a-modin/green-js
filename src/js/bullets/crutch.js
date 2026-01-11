@@ -14,8 +14,15 @@ class Crutch extends Bullet {
   };
 
   update(){
-    this.speed.plus(this.acceleration);
-    this.position.plus(this.speed).fixed(0);
+    const delta = this.APP.engine.deltaTime;
+    this.speed.plus({
+      x: this.acceleration.x * delta,
+      y: this.acceleration.y * delta
+    });
+    this.position.plus({
+      x: this.speed.x * delta,
+      y: this.speed.y * delta
+    }).fixed(0);
     this.checkCollisions();
   };
 

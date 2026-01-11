@@ -14,7 +14,11 @@ class Bullet {
   };
 
   update(){
-    this.position.plus(this.speed).fixed(0);
+    const delta = this.APP.engine.deltaTime;
+    this.position.plus({
+      x: this.speed.x * delta,
+      y: this.speed.y * delta
+    }).fixed(0);
   };
 
   draw(ctx){

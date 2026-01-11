@@ -70,19 +70,13 @@ class Balloon extends Transport{
     this.checkCollisions();
     this.checkOnPlatform();
 
-    // if (this.isOnPlatform === false) {
-    //   // this.acceleration.y = this.APP.settings.gravity;
-    //   // this.acceleration.y = this.APP;
-
-    // } else {
-    //   // this.acceleration.y = 0;
-    //   // this.speed.y = 0;
-    // };
+    const delta = this.APP.engine.deltaTime;
 
     if (this.acceleration.x === 0) {
+      const windageFactor = Math.pow(this.APP.settings.windage + 0.02, delta);
       this.speed.multiply(
         {
-          x: this.APP.settings.windage + 0.02, 
+          x: windageFactor, 
           y: 1
         }).fixed(7);
     };
@@ -93,18 +87,20 @@ class Balloon extends Transport{
           this.speed.y = 0.2;
         }
 
+        const yFactor = Math.pow(0.8, delta);
         this.speed.multiply(
           {
             x: 1, 
-            y: 0.8
+            y: yFactor
           }).fixed(7);
       };
       
     };
 
-    // if (!this.isOnPlatform) {
-      this.speed.plus(this.acceleration);
-    // };
+    this.speed.plus({
+      x: this.acceleration.x * delta,
+      y: this.acceleration.y * delta
+    });
 
     // Лимит скорости
     if (this.speed.x > this.maxSpeed) {
@@ -122,7 +118,10 @@ class Balloon extends Transport{
     this.oldPosition.x = this.position.x;
     this.oldPosition.y = this.position.y;
 
-    this.position.plus(this.speed).fixed(7);
+    this.position.plus({
+      x: this.speed.x * delta,
+      y: this.speed.y * delta
+    }).fixed(7);
 
     this.input.position.x = this.position.x + this.width / 2;
     this.input.position.y = this.position.y + 400;

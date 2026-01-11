@@ -6,9 +6,20 @@ class Engine {
   constructor(APP) {
     this.status = 'inactive';
     this.APP = APP;
+    this.targetFrameTime = 1000 / 60; // 60 FPS as baseline
+    this.lastFrameTime = 0;
+    this.deltaTime = 1;
   };
 
-  tick() {
+  tick(currentTime = 0) {
+    const elapsed = currentTime - this.lastFrameTime;
+    this.deltaTime = elapsed / this.targetFrameTime;
+    
+    // Clamp delta to avoid huge jumps (e.g. after tab switch)
+    if (this.deltaTime > 3) this.deltaTime = 3;
+    if (this.deltaTime < 0.1) this.deltaTime = 0.1;
+    
+    this.lastFrameTime = currentTime;
     this.APP.checkTimers();
     this.APP.checkAnimationsChains();
     this.APP.checkWatchers();

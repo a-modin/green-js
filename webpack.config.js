@@ -9,12 +9,14 @@ module.exports = {
   context: __dirname + '/src',
 
   entry: {
-    main: ['webpack-dev-server/client?http://localhost:8080/','./main.js']
+    main: NODE_ENV === 'development' 
+      ? ['webpack-dev-server/client?http://localhost:8080/','./main.js']
+      : './main.js'
   },
 
   output: {
     path: __dirname + '/dist',
-    publicPath: 'dist',
+    publicPath: process.env.PUBLIC_PATH || (NODE_ENV === 'production' ? './' : '/'),
     filename: 'app.js'
   },
 
@@ -29,6 +31,9 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin('NODE_ENV'),
     new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: './index.html'
+    }),
     new WebpackBuildNotifierPlugin({
       title: "Game",
       logo: path.resolve("./img/favicon.png"),
@@ -71,7 +76,7 @@ module.exports = {
     port: 8080,
     hot: true,
     inline: true,
-    // contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, "src"),
     watchOptions: {
       poll: true
     }

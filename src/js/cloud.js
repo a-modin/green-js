@@ -11,7 +11,11 @@ class Cloud extends Element {
   };
 
   update(){
-    this.position.plus(this.speed).fixed(1);
+    const delta = this.APP.engine.deltaTime;
+    this.position.plus({
+      x: this.speed.x * delta,
+      y: this.speed.y * delta
+    }).fixed(1);
     if (this.position.x < -2000) {
       this.delete();
     };

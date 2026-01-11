@@ -147,6 +147,8 @@ class Character {
     this.checkNearbyHole();
     this.checkAggression();
 
+    const delta = this.APP.engine.deltaTime;
+
     // Включить гравитацию, если игрок в воздухе
     // if (this.status.onPlatform === false
     if (!this.isOnPlatform && !this.isInTransport) {
@@ -159,15 +161,19 @@ class Character {
 
     // Если ускорения нет, включить сопротивление воздуха
     if (this.acceleration.x === 0) {
+      const windageFactor = Math.pow(settings.windage, delta);
       this.speed.multiply(
         {
-          x: settings.windage, 
+          x: windageFactor, 
           y: 1
         }).fixed(2);
     };
 
-    // Ускорение
-    this.speed.plus(this.acceleration);
+    // Ускорение (scaled by delta)
+    this.speed.plus({
+      x: this.acceleration.x * delta,
+      y: this.acceleration.y * delta
+    });
 
     // Лимит скорости
     if (this.speed.x > this.maxSpeed) {
@@ -187,8 +193,11 @@ class Character {
     this.oldPosition.x = this.position.x;
     this.oldPosition.y = this.position.y;
 
-    // Изменение позиции
-    this.position.plus(this.speed).fixed(0);
+    // Изменение позиции (scaled by delta)
+    this.position.plus({
+      x: this.speed.x * delta,
+      y: this.speed.y * delta
+    }).fixed(0);
 
     this.center.x = this.position.x + this.width / 2
     this.center.y = this.position.y + this.height / 2;
